@@ -28,65 +28,65 @@
     * Equal Method (default)
 
     ```JSON
-[
-    {
-        'imports': [
-            'import com.module.dao.entity.City'
-        ],
-        'className': 'UserInfo',
-        'description': '用户表',
-        'annotations': {
-            '@Entity(name = "user_info")'
-        },
-        'properties': {
-            'id': {
-                'type': 'Integer',
-                'description': '用户ID',
-                'annotations': {
-                    '@Id',
-                    '@GeneratedValue',
-                    '@Column(name = "id", unique = true, nullable = false)'
-                }
+    [
+        {
+            'imports': [
+                'import com.module.dao.entity.City'
+            ],
+            'className': 'UserInfo',
+            'description': '用户表',
+            'annotations': {
+                '@Entity(name = "user_info")'
             },
-            'ServiceCity'{
-                'type': 'CityInfo',
-                'description': '用户ID',
-                'annotations': {
-                    '@Column(name = "service_city", nullable = false)',
-                    '@ManyToOne',
-                    '@JoinColumn(name = "city_info", nullable = false)'
-                }
+            'properties': {
+                'id': {
+                    'type': 'Integer',
+                    'description': '用户ID',
+                    'annotations': {
+                        '@Id',
+                        '@GeneratedValue',
+                        '@Column(name = "id", unique = true, nullable = false)'
+                    }
+                },
+                'ServiceCity'{
+                    'type': 'CityInfo',
+                    'description': '用户ID',
+                    'annotations': {
+                        '@Column(name = "service_city", nullable = false)',
+                        '@ManyToOne',
+                        '@JoinColumn(name = "city_info", nullable = false)'
+                    }
 
+                }
             }
-        }
-    },
-    {
-        'imports': [],
-        'className': 'CityInfo',
-        'description': '城市信息',
-        'annotations': {
-            '@Entity(name = "city_info")'
         },
-        'properties': {
-            'id': {
-                'type': 'Integer',
-                'description': '城市ID',
-                'annotations': {
-                    '@Id',
-                    '@GeneratedValue',
-                    '@Column(name = "id", unique = true, nullable = false)'
-                }
+        {
+            'imports': [],
+            'className': 'CityInfo',
+            'description': '城市信息',
+            'annotations': {
+                '@Entity(name = "city_info")'
             },
-            'cityName'{
-                'type': 'String',
-                'description': '城市名称',
-                'annotations': {
-                    '@Column(name = "city_name", nullable = false)'
-                }
+            'properties': {
+                'id': {
+                    'type': 'Integer',
+                    'description': '城市ID',
+                    'annotations': {
+                        '@Id',
+                        '@GeneratedValue',
+                        '@Column(name = "id", unique = true, nullable = false)'
+                    }
+                },
+                'cityName'{
+                    'type': 'String',
+                    'description': '城市名称',
+                    'annotations': {
+                        '@Column(name = "city_name", nullable = false)'
+                    }
 
+                }
             }
-        }
-    },
-    ...
-]
+        },
+        ...
+    ]
     ```
